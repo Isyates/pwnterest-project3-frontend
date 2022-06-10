@@ -1,5 +1,5 @@
 //import Link for use in hitting Show route
-import Link from "react-router-dom"
+import { Link } from "react-router-dom"
 
 //this is the "card"
 //this Component displays within List
