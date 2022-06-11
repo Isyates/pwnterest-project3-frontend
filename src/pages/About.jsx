@@ -35,7 +35,9 @@ display: flex;
 flex-flow: column nowrap;
 justify-content: center;
 align-items: center;
+gap: 1em;
 `
+
 
 export default function About() {
     // then map over the randomDevs array and display <Dev/>'s
