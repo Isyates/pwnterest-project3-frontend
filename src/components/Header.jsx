@@ -4,7 +4,7 @@ export default function Header() {
     return <div className="header">
         
         {/* //Image on left side with Link to list route */}
-        <Link to="/" className="logo"></Link>
+        <Link to="/" className="logo"><img src="" alt="Pwnterest"/></Link>
         {/* // + on right side with Link to create route */}
         <Link to="/create" className="createBtn"><button>Create Post</button></Link>
     </div>
