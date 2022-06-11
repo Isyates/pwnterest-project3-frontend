@@ -32,7 +32,7 @@ export default function About() {
             return (
                 <div className="dev-container" key={idx}>
                     <Dev
-                    //props
+                        dev={dev}
                     />
                 </div>
             )
