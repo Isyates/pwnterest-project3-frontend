@@ -2,17 +2,17 @@
 import { Routes, Route, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import CONFIG from "../config/apiEP"
-// import About from "../pages/About"
-// import Create from "../pages/Create"
-// import Edit from "../pages/Edit"
-// import List from "../pages/List"
-// import Show from "../pages/Show"
+import About from "../pages/About"
+import Create from "../pages/Create"
+import Edit from "../pages/Edit"
+import List from "../pages/List"
+import Show from "../pages/Show"
 
 export default function Main() {
    //posts, setPosts using setState
    const [posts, setPosts] = useState(null)
    //import url for api from config
-   const postsAPI = `${CONFIG.DEV.URL}/posts/`
+   const postsAPI = `${CONFIG.PROD.URL}`
    //functions to be created:
    //getPosts to hit the api endpoint, will store API return as state (setState blah)
    const getPosts = async () => {
@@ -79,22 +79,22 @@ export default function Main() {
                />
             }/>
             <Route 
-               path="/" 
+               path="/create" 
                element={
                <Create
-                  createPost={createPost()}
+                  createPost={createPost}
                />
             }/>
             <Route 
-               path="/posts/:id" 
+               path="/:id/edit" 
                element={
                <Edit
-                  updatePost={updatePost()}
-                  deletePost={deletePost()}
+                  updatePost={updatePost}
+                  deletePost={deletePost}
                />
             }/>
             <Route 
-               path="/posts/:id" 
+               path="/:id/show" 
                element={
                <Show
                   posts={posts}
