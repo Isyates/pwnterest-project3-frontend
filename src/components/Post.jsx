@@ -11,7 +11,11 @@ export default function Post({ key, id, title, img }) {
             <div className="post">
                 {/* //entire thing is basically a Link to show route */}
                 {/* //displays image, displays title, Link is to Show route with id */}
-                <img src={img} alt="image" className="post-image" />
+                <div className="image-block">
+                    <img src={img} alt="image" className="post-image" />
+                </div>
+                
+                {/* could truncate title here with the "..." */}
                 <div className="post-title">{title}</div>
             </div>
         </Link>
