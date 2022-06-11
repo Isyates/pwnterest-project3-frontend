@@ -40,7 +40,7 @@ export default function Main() {
       await fetch(postsAPI + _id, {
          method: "PUT",
          headers: {
-            "Content-Type": "Application.json"
+            "Content-Type": "Application/json"
          },
          body: JSON.stringify(post)
       })
@@ -89,6 +89,7 @@ export default function Main() {
                path="/:id/edit" 
                element={
                <Edit
+                  posts={posts}
                   updatePost={updatePost}
                   deletePost={deletePost}
                />
