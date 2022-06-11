@@ -7,8 +7,8 @@ import { Link } from "react-router-dom"
 
 export default function Post({ key, id, title, img }) {
     return (
-        <Link key={key} className="post" to={`/post/${id}`}>
-            <div key={key} className="post">
+        <Link key={key} to={`/post/${id}`}>
+            <div className="post">
                 {/* //entire thing is basically a Link to show route */}
                 {/* //displays image, displays title, Link is to Show route with id */}
                 <img src={img} alt="image" className="post-image" />
