@@ -11,13 +11,13 @@
 //----------------------------------------------//
 
 //Dev component
-import Dev from "./components/Dev"
+import Dev from "../components/Dev"
 
 //us
-import hieu from "./devs/hieu"
-import isiah from "./devs/isiah"
-import kyle from "./devs/kyle"
-import rich from "./devs/rich"
+import hieu from "../devs/hieu"
+import isiah from "../devs/isiah"
+import kyle from "../devs/kyle"
+import rich from "../devs/rich"
 
 //create array to iterate
 let devs = [hieu, isiah, kyle, rich]
@@ -27,12 +27,14 @@ let randomDevs = devs.sort(() => Math.random() - 0.5);
 
 export default function About() {
     // then map over the randomDevs array and display <Dev/>'s
-    <div className="about">
-        {randomDevs.map((dev) => {
+   return <div className="about">
+        {randomDevs.map((dev, idx) => {
             return (
-                <Dev
-                //props
-                />
+                <div className="dev-container" key={idx}>
+                    <Dev
+                    //props
+                    />
+                </div>
             )
         })}
     </div>
