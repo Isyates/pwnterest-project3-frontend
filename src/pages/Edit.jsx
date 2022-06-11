@@ -44,7 +44,7 @@ let post = posts.find((foundPost) => foundPost._id === id)
     //i may be forgetting something
     const removePost = () => {
         deletePost(id)
-        navigate('/list')
+        navigate('/')
     }
     //prop is updatePost function, takes ID, invoked when submit clicked
     //props also includes posts array, use id when you forEach posts to find the post in question to render it to the form values
