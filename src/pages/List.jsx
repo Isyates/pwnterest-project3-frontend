@@ -10,6 +10,11 @@ export default function List(props) {
 
         {/* //loading/loaded */}
         {/* //maps posts array */}
+        {/* key={post._id} */}
+        {/* id={post._id} */}
+        {/* title={post.title} */}
+        {/* img={post.img} */}
+        
 
     </div>
     
