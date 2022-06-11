@@ -1,22 +1,63 @@
 //import Routes Route useState useEffect
-
-//import url for api from config
-
-//posts, setPosts using setState
-
-//functions to be created:
-//getPosts to hit the api endpoint, will store API return as state (setState blah)
-//createPost to POST to api
-//updatePost(post, _id) takes req.body (post) and _id parameters
-//deletePost(_id) takes _id parameter
-
-//useEffect to setPosts with getPosts on page load
-
-
+import { Routes, Route, Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import CONFIG from "../config/apiEP"
+// import About from "../pages/About"
+// import Create from "../pages/Create"
+// import Edit from "../pages/Edit"
+// import List from "../pages/List"
+// import Show from "../pages/Show"
 
 export default function Main() {
-
-return <div className="main">
+   //posts, setPosts using setState
+   const [posts, setPosts] = useState(null)
+   //import url for api from config
+   const postsAPI = `${CONFIG.DEV.URL}/posts/`
+   //functions to be created:
+   //getPosts to hit the api endpoint, will store API return as state (setState blah)
+   const getPosts = async () => {
+      const data = await fetch(postsAPI, {
+         method: "GET",
+         headers: {
+            "Content-Type": "Application/json"
+         }
+      }).then((res) => res.json())
+      setPosts(data)
+   }
+   //createPost to POST to api
+   const createPost = async (post) => {
+      await fetch(postsAPI, {
+         method: "POST",
+         headers: {
+            "Content-Type": "Application/json"
+         },
+         body: JSON.stringify(post)
+      })
+      getPosts()
+   }
+   //updatePost(post, _id) takes req.body (post) and _id parameters
+   const updatePost = async (post, _id) => {
+      await fetch(postsAPI + _id, {
+         method: "PUT",
+         headers: {
+            "Content-Type": "Application.json"
+         },
+         body: JSON.stringify(post)
+      })
+      getPosts()
+   }
+   //deletePost(_id) takes _id parameter
+   const deletePost = async (_id) => {
+      await fetch(postsAPI + _id, {
+         method: "DELETE",
+         headers: {
+            "Content-Type": "Application/json"
+         }
+      })
+      getPosts()
+   }
+   //useEffect to setPosts with getPosts on page load
+   useEffect(() => {getPosts()}, [])
 
    {/* <Routes>
    <route path element
@@ -26,10 +67,50 @@ return <div className="main">
    //forEach element in the array, if req.params.id = element._id, then use that particular element to render the show page
    <Route to create needs prop passed for createpost function for the form
    <Route for about page
-</Routes> */}
-
+   </Routes> */}
+   return (
+      <div className="main">
+         <Routes>
+            <Route 
+               path="/" 
+               element={
+               <List
+                  posts={posts}
+               />
+            }/>
+            <Route 
+               path="/" 
+               element={
+               <Create
+                  createPost={createPost()}
+               />
+            }/>
+            <Route 
+               path="/posts/:id" 
+               element={
+               <Edit
+                  updatePost={updatePost()}
+                  deletePost={deletePost()}
+               />
+            }/>
+            <Route 
+               path="/posts/:id" 
+               element={
+               <Show
+                  posts={posts}
+               />
+            }/>
+            <Route 
+               path="/about" 
+               element={
+               <About
+               />
+            }/>
+         </Routes>
+         <Link to="/about">About</Link>
    {/* //about link goes here somewhere */}
-</div>
+      </div>
+   )
 }
 
 
