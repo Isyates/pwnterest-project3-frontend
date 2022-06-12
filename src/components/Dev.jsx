@@ -4,7 +4,7 @@ import styled from "styled-components"
 const DevContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 4fr;
-    // background-color: grey;
+    // background-color: #444;
     background: linear-gradient(to right, #444, #345 100%);
     border-radius: 4em;
     height: 8em;
