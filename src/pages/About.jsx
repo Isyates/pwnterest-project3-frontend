@@ -16,21 +16,22 @@ let devs = [hieu, isiah, kyle, rich]
 //randomize the array
 let randomDevs = devs.sort(() => Math.random() - 0.5);
 
-const aboutDiv = styled.div`
+const AboutDiv = styled.div`
 width: 100%;
 height: 100%;
 display: flex;
 flex-flow: column nowrap;
 justify-content: center;
 align-items: center;
+gap: 1em;
 `
 
 
 export default function About() {
     // then map over the randomDevs array and display <Dev/>'s
-    return <aboutDiv>
+    return <AboutDiv>
         {randomDevs.map((dev, idx) => {
                    return <Dev dev={dev} key={idx}/>
         })}
-    </aboutDiv>
+    </AboutDiv>
 }

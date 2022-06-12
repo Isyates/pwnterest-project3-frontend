@@ -9,7 +9,6 @@ const DevContainer = styled.div`
     border-radius: 4em;
     height: 8em;
     width: 60%;
-    margin: 1em
 `
 const DevImg = styled.img`
     object-fit: cover;
@@ -21,6 +20,7 @@ const DevImg = styled.img`
 const DevStats = styled.div`
     display: flex;
     flex-flow: column nowrap;
+    gap: .4em;
     justify-content: center;
     color: white;
     // font-size: .8em;
