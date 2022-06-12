@@ -1,15 +1,3 @@
-//----------------------------------------------//
-//template for object:
-//----------------------------------------------//
-// export default {
-//     name: "Dev Name",
-//     img: "img.jpeg", //from public folder, we can dump images there
-//     github: "https://????.github.com",
-//     blurb: "Here is a short bio, we need to decide what length the bio will be."
-//     //perhaps add something else?
-// }
-//----------------------------------------------//
-
 //Dev component
 import Dev from "../components/Dev"
 
@@ -35,7 +23,6 @@ display: flex;
 flex-flow: column nowrap;
 justify-content: center;
 align-items: center;
-flex-gap: 1em;
 `
 
 
