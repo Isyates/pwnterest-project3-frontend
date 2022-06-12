@@ -4,10 +4,12 @@ import styled from "styled-components"
 const DevContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 4fr;
-    background-color: grey;
+    // background-color: grey;
+    background: linear-gradient(to right, #444, #345 100%);
     border-radius: 4em;
     height: 8em;
     width: 60%;
+    margin: 1em
 `
 const DevImg = styled.img`
     object-fit: cover;

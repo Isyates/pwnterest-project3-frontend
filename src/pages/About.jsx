@@ -35,7 +35,7 @@ display: flex;
 flex-flow: column nowrap;
 justify-content: center;
 align-items: center;
-gap: 1em;
+flex-gap: 1em;
 `
 
 
