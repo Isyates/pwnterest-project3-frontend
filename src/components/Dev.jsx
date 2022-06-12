@@ -21,21 +21,39 @@ const DevStats = styled.div`
     flex-flow: column nowrap;
     justify-content: center;
     color: white;
-    font-size: .8em;
+    // font-size: .8em;
     width: 90%; 
+    h3{
+        font-style: italic;
+        // margin-bottom: 1em;
+        margin:0;
+    }
+    a{
+        color:white;
+        font-weight: 800;
+        // font-size: .5em;
+        margin: 0;
+        padding: 0
+    }
+    p{
+        // font-size: .8em
+        margin:0
+    }
 `
 
 export default function Dev({ dev, key }) {
 
     //receives a bunch of props from each iteration of the map of the dev array
-    const { name, img, github, blurb } = dev //destructuring
+    const { name, img, github, blurb, linkedin } = dev //destructuring
 
     return (
         <DevContainer key={key}>
                     <DevImg src={img} alt={name}/>
                     <DevStats>
-                        <h5>{name}</h5>
-                        <a href={github}>{github.slice(github.indexOf("/")+2)}</a>
+                        <h3>{name}</h3>
+                        <span>
+                            <a href={github}>{github.slice(github.indexOf("/")+2)}</a>  //  <a href={linkedin}>{linkedin.slice(linkedin.indexOf("/")+2)}</a>
+                        </span>
                         <p>{blurb}</p>
                     </DevStats>
         </DevContainer>
