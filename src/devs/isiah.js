@@ -4,5 +4,4 @@ export default {
     github: "https://github.com/Isyates",
     blurb: "Here is a short bio, we need to decide what length the bio will be.",
     linkedin:"https://www.linkedin.com/in/isyates/"
-    //perhaps add something else?
 }

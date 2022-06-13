@@ -1,15 +1,3 @@
-//----------------------------------------------//
-//template for object:
-//----------------------------------------------//
-// export default {
-//     name: "Dev Name",
-//     img: "img.jpeg", //from public folder, we can dump images there
-//     github: "https://????.github.com",
-//     blurb: "Here is a short bio, we need to decide what length the bio will be."
-//     //perhaps add something else?
-// }
-//----------------------------------------------//
-
 //Dev component
 import Dev from "../components/Dev"
 
@@ -28,7 +16,7 @@ let devs = [hieu, isiah, kyle, rich]
 //randomize the array
 let randomDevs = devs.sort(() => Math.random() - 0.5);
 
-const aboutDiv = styled.div`
+const AboutDiv = styled.div`
 width: 100%;
 height: 100%;
 display: flex;
@@ -41,9 +29,9 @@ gap: 1em;
 
 export default function About() {
     // then map over the randomDevs array and display <Dev/>'s
-    return <aboutDiv>
+    return <AboutDiv>
         {randomDevs.map((dev, idx) => {
                    return <Dev dev={dev} key={idx}/>
         })}
-    </aboutDiv>
+    </AboutDiv>
 }
