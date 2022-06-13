@@ -2,7 +2,7 @@
 import styled from "styled-components"
 //import Link (for use to hit the List route and New route)
 import { Link } from "react-router-dom"
-import logo from "../img/Logo2.png"
+import logo from "../img/Logo2v2.png"
 import plus from "../img/plus1.png"
 
 const HeaderContainer = styled.div`
@@ -10,12 +10,12 @@ display: flex;
 flex-flow: row nowrap;
 justify-content: space-between;
 align-items: center;
-padding: 0 1em;
+padding: .2em;
 .add{
     max-width: 2em;
 }
 .logo{
-    max-width:4em;
+    max-width:8em;
 }`
 
 export default function Header() {
