@@ -1,3 +1,14 @@
+/* //this is used  */
+#root {
+    /* display: flex;
+    flex-flow: row nowrap; */
+    /* justify-content: center; */
+    width: 70%;
+    border: 1px solid orange;   
+}
+
+
+/* these will be deprecated in favor of styled components */
 .list {
     width: 100%;
     display: grid;
