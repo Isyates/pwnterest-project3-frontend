@@ -5,7 +5,9 @@
     flex-flow: row nowrap; */
     /* justify-content: center; */
     width: 70%;
-    border: 1px solid orange;   
+    /* border: 1px solid orange;    */
+    background-color: white;
+    padding: 0em 1.2em 0em 1.2em;
 }
 
 

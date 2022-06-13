@@ -57,6 +57,8 @@ let post = posts.find((foundPost) => foundPost._id === id)
                 type="text"
                 name="title"
                 placeholder="title"
+                minLength="1"
+                maxLength="35"
                 value={editForm.title}
                 onChange={handleChange}
                 />
