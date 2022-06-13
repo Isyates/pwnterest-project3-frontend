@@ -19,12 +19,14 @@ padding: 0 1em;
 }`
 
 export default function Header() {
-    return <HeaderContainer>
-        {/* //Image on left side with Link to list route */}
-        <Link to="/" ><img src={logo} className="logo" alt="Pwnterest"/></Link>
-        {/* // + on right side with Link to create route */}
-        <Link to="/create" className="createBtn"><img className="add" src={plus} alt="New Post" /></Link>
-    </HeaderContainer>   
+    return (
+        <HeaderContainer>
+            {/* //Image on left side with Link to list route */}
+            <Link to="/" ><img src={logo} className="logo" alt="Pwnterest" /></Link>
+            {/* // + on right side with Link to create route */}
+            <Link to="/create" className="createBtn"><img className="add" src={plus} alt="New Post" /></Link>
+        </HeaderContainer>
+    )
 }
 
 
