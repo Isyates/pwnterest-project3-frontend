@@ -7,6 +7,19 @@ import Create from "../pages/Create"
 import Edit from "../pages/Edit"
 import List from "../pages/List"
 import Show from "../pages/Show"
+import styled from "styled-components"
+
+const MainContainer = styled.div`
+overflow-y: scroll;
+margin: 0;
+scrollbar-color: #999 #333;
+height: calc(100vh - 80px);
+border-radius: .5em;
+// background: blue;
+::-webkit-scrollbar {
+      display: none;
+}
+`
 
 export default function Main() {
    //posts, setPosts using setState
@@ -69,7 +82,8 @@ export default function Main() {
    <Route for about page
    </Routes> */}
    return (
-      <div className="main">
+      
+      <MainContainer>
          <Routes>
             <Route 
                path="/" 
@@ -108,9 +122,8 @@ export default function Main() {
                />
             }/>
          </Routes>
-         <Link to="/about">About</Link>
    {/* //about link goes here somewhere */}
-      </div>
+      </MainContainer>
    )
 }
 

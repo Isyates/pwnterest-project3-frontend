@@ -6,10 +6,10 @@ import styled from "styled-components"
 
 //container
 const ListContainer = styled.div`
-border: 1px solid blue;
+// margin: 15px;
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: .2em;
+gap: 1em;
 a{
     text-decoration: none;
 }
@@ -27,7 +27,7 @@ export default function List({ posts }) {
                         // </Link>
                         <Post post={post}/>
                     )
-                })}
+                }).reverse()}
             </ListContainer>
         )
     }

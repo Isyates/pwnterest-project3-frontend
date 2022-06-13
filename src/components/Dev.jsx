@@ -24,7 +24,7 @@ const DevStats = styled.div`
     justify-content: center;
     color: white;
     // font-size: .8em;
-    width: 90%; 
+    width: 100%; 
     h3{
         font-style: italic;
         // margin-bottom: 1em;
@@ -39,7 +39,8 @@ const DevStats = styled.div`
     }
     p{
         // font-size: .8em
-        margin:0
+        margin:0;
+        margin-right: 2em;
     }
 `
 
