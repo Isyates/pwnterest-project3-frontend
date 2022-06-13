@@ -70,7 +70,7 @@ let post = posts.find((foundPost) => foundPost._id === id)
                 <button type="submit">Update</button>
         </form>
         <StyledBtn onClick={removePost}>Delete Post</StyledBtn>
-        <Link to={`/${post._id}`}>Cancel</Link>
+        <Link to={`/`}>Cancel</Link>
         {/* populate form values from post */}
 
     </StyledDiv>
