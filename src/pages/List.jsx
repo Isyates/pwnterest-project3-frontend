@@ -6,6 +6,7 @@ import styled from "styled-components"
 
 //container
 const ListContainer = styled.div`
+// margin: 15px;
 border: 1px solid blue;
 display: grid;
 grid-template-columns: 1fr 1fr;
