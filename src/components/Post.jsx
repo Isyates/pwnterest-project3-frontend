@@ -8,25 +8,30 @@ import styled from "styled-components"
 const PostContainer = styled.div`
 box-sizing: border-box;
 border-radius: .5em;
-padding: .2em;
-padding: .2em;
+padding: .5em;
 background-color: rgb(55,50,92);
-// height: 90%;
+height: min-content;
 
 .post-title{
     font-size: 1.2em;
-    color: white;
     font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: white;
     text-shadow: 1px 1px 2px black;
+    letter-spacing: .05em;
     text-decoration: none;
     font-style: italic;
     padding: 0;
     margin: 0;
+    position: relative;
+    bottom: 1.5em;
+    left: .5em;
+    margin-bottom: -1.3em;
 }
 .post-image{
     max-width: 98%;
     max-height: 98%;
-    height: 100%    
+    // height: 100%    
 }
 .image-block{
     width: 100%;
@@ -57,7 +62,7 @@ export default function Post({ post }) {
                 </div>
 
                 {/* could truncate title here with the "..." */}
-                <div className="post-title">{title}</div>
+                {(title) ? <div className="post-title">{title}</div> : ""}
             </PostContainer>
         </Link>
     )

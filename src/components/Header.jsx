@@ -6,11 +6,13 @@ import logo from "../img/Logo2v2.png"
 import plus from "../img/plus1.png"
 
 const HeaderContainer = styled.div`
+box-sizing: border-box;
 display: flex;
 flex-flow: row nowrap;
 justify-content: space-between;
 align-items: center;
-padding: .2em;
+padding: 1em .1em .6em .2em;
+height: 45px;
 .add{
     max-width: 2em;
 }
