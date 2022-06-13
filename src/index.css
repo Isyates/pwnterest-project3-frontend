@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* centers the app on the page  */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
 code {

@@ -1,30 +1,37 @@
 //import Link for use in array map to display Show page
- import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 //import Post component
 import Post from "../components/Post"
-//props are going to be posts state (array)
+import styled from "styled-components"
 
+//container
+const ListContainer = styled.div`
+border: 1px solid blue;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: .2em;
+a{
+    text-decoration: none;
+}
+`
 
-  {/* //loading/loaded */}
-
-        {/* //maps posts array */}
-        {/* key={post._id} */}
-         {/* id={post._id} */}
-        {/* title={post.title} */}
-         {/* img={post.img} */}
-       
-export default function List({posts}) {
+export default function List({ posts }) {
     const loaded = () => {
-        return posts.map((post, idx) => {
-            return <Link to={`${post._id}/show`} key={idx}>
-                <div>
-                <img src={post.img} alt={post.title}/>
-                {post.title}
-                </div>
-            </Link>
-        })
+        return (
+            <ListContainer>
+                {posts.map((post, idx) => {
+                    return (
+                        // <Link to={`${post._id}/show`} key={idx}>
+                        //         <img src={post.img} alt={post.title} />
+                        //         {post.title}
+                        // </Link>
+                        <Post post={post}/>
+                    )
+                })}
+            </ListContainer>
+        )
     }
     const loading = () => <h1>loading...</h1>
     return (posts) ? loaded() : loading()
-    
+
 }
