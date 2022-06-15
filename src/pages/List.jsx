@@ -7,8 +7,9 @@ import styled from "styled-components"
 //container
 const ListContainer = styled.div`
 // margin: 15px;
+// box-sizing: border-box;
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: calc(50% - .5em) calc(50% - .5em);
 gap: 1em;
 a{
     text-decoration: none;
