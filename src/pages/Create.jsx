@@ -1,7 +1,43 @@
 //import useNavigate to redirect after submit
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import styled from "styled-components"
+import Button from "../components/styled-components/Button"
+import Input from "../components/styled-components/Input"
 //prop is going to be createPost function
+
+let CreateContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items:center;
+height: 100%;
+form{
+    legend{
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    // input{
+    //     width: 80%;
+    //     margin-bottom: 5px;
+    //     padding: 5px;
+    //     letter-spacing: 1px;
+    //     border-radius: 5px;
+    //     border: 1px solid rgb(55,50,92);
+    //     box-shadow: 1px 1px 2px grey;
+    //     &:focus{
+    //         outline: none;
+    //         border: 2px solid orange;
+    //     }
+    }
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+`
+
 
 export default function Create({ createPost }) {
     const navigate = useNavigate()
@@ -30,12 +66,12 @@ export default function Create({ createPost }) {
         navigate("/")
     }
 
-    return <div className="create">
+    return <CreateContainer>
 
         {/* //form with handlechange handlesubmit */}
         <form onSubmit={handleSubmit}>
             <legend>Create New Post</legend>
-            <input 
+            <Input
                 type="text"
                 name="title"
                 placeholder="Title"
@@ -45,15 +81,15 @@ export default function Create({ createPost }) {
                 minLength="1"
                 maxLength="35"
             />
-            <input 
+            <Input
                 type="url"
                 name="img"
-                placeholder="Image"
+                placeholder="Image URL"
                 value={form.img}
-                onChange={handleChange} 
+                onChange={handleChange}
             />
-            <button type="submit">Add Post</button>
+            <Button type="submit" value="Add Post"/>
         </form>
-    </div>
+    </CreateContainer>
 
 }
