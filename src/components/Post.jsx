@@ -11,7 +11,6 @@ border-radius: .5em;
 padding: .5em;
 background-color: rgb(55,50,92);
 height: min-content;
-
 .post-title{
     font-size: 1.2em;
     font-family: 'Open Sans', sans-serif;
@@ -30,8 +29,7 @@ height: min-content;
 }
 .post-image{
     max-width: 98%;
-    max-height: 98%;
-    // height: 100%    
+    max-height: 30vh;
 }
 .image-block{
     width: 100%;
@@ -43,9 +41,6 @@ height: min-content;
     background: rgb(44,90,145);
     object-fit: cover;
     border-radius: .2em;
-}
-img{
-    // border: 1px solid white;
 }
 `
 
@@ -60,7 +55,6 @@ export default function Post({ post }) {
                 <div className="image-block">
                     <img src={img} alt="image" className="post-image" />
                 </div>
-
                 {/* could truncate title here with the "..." */}
                 {(title) ? <div className="post-title">{title}</div> : ""}
             </PostContainer>
