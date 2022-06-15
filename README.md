@@ -35,17 +35,18 @@ flowchart LR
   Router-->Edit
   Router-->Show
   Router-->About
+  List-->Post
 ```
 
 ## User Interface Mockups
 
 | Screenshots | Detail |
 |-------|--------|
-|![Home](/pwnterest-project3-frontend/public/Main.png) | Landing Page |
-| ![Create](/pwnterest-project3-frontend/public/Create.png) | Create a post page |
-| ![Show](/pwnterest-project3-frontend/public/Show.png) | Display one post |
-| ![Edit](/pwnterest-project3-frontend/public/Edit.png) | Edit the chosen post |
-| ![About](/pwnterest-project3-frontend/public/About.png) | Learn more about the devs on their socials |
+|![Home](https://github.com/Isyates/pwnterest-project3-frontend/blob/main/public/Main.png?raw=true) | Landing Page |
+| ![Create](https://github.com/Isyates/pwnterest-project3-frontend/blob/main/public/Create.png?raw=true) | Create a post page |
+| ![Show](https://github.com/Isyates/pwnterest-project3-frontend/blob/main/public/Show.png?raw=true) | Display one post |
+| ![Edit](https://github.com/Isyates/pwnterest-project3-frontend/blob/main/public/Edit.png?raw=true) | Edit the chosen post |
+| ![About](https://github.com/Isyates/pwnterest-project3-frontend/blob/main/public/About.png?raw=true) | Learn more about the devs on their socials |
 
 ## Coming Soon
 
