@@ -21,10 +21,12 @@ const DevStats = styled.div`
     display: flex;
     flex-flow: column nowrap;
     gap: .4em;
-    justify-content: center;
+    justify-content: flex-start;
     color: white;
+    padding-top: .5em;
     // font-size: .8em;
     width: 100%; 
+    // background-color: blue;
     h3{
         font-style: italic;
         // margin-bottom: 1em;
@@ -43,12 +45,13 @@ const DevStats = styled.div`
         margin-left: .4em;
     }
     p{
-        font-size: .8em
+        font-size: .9em;
         margin:0;
         margin-right: 2em;
         overflow-y: scroll;
-        height: 3em;
+        height: 5em;
         margin: 0;  
+        width: 95%;
         ::-webkit-scrollbar {
             display: none;
       }
