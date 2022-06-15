@@ -16,6 +16,13 @@ a{
 }
 `
 
+const Spinner = styled.div`
+display: flex;
+height:100%;
+justify-content: center;
+align-items: center
+`
+
 export default function List({ posts }) {
     const loaded = () => {
         return (
@@ -32,7 +39,9 @@ export default function List({ posts }) {
             </ListContainer>
         )
     }
-    const loading = () => <h1>loading...</h1>
+    const loading = () => {return (<div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="loading"/>
+    </div>)}
     return (posts) ? loaded() : loading()
 
 }
