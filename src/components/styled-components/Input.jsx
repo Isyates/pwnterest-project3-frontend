@@ -22,6 +22,6 @@ export default function Input(props) {
         minLength={props.minLength}
         maxLength={props.maxLength}
         value={props.value}
-        onChange={props.handleChange}
+        onChange={props.onChange}
     />
 }
