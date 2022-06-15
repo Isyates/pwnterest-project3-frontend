@@ -4,6 +4,8 @@ import { Link } from "react-router-dom"
 import { useParams, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import styled from "styled-components"
+import Button from "../components/styled-components/Button"
+import Input from "../components/styled-components/Input"
 
 const StyledBtn = styled.button`
 background-color: red;
@@ -14,13 +16,23 @@ color: white;
 padding: 2px 32px ;
 text-align: center;
 text-decoration: none;
-display: inline-block;
+// display: block;
 font-size: px;
-
+display: block;
+float: center;
 `
 const StyledDiv = styled.div`
-color: white;
+// color: white;
 a: visited{color: greenyellow};
+// display: flex;
+// flex-flow: column nowrap;
+// justify-content: center;
+text-align: center;
+img{
+    max-height: 55vh;
+    border-radius: 10px;
+    margin-bottom: .4em;
+}
 `
 
 export default function Edit({posts, updatePost, deletePost}) {
@@ -51,26 +63,29 @@ let post = posts.find((foundPost) => foundPost._id === id)
     const loaded = () => { 
        
         return <StyledDiv>   {/* //form for editing */}
-        <h1>{post.name}</h1> 
+        <h1>{post.title}</h1> 
+        <img src={post.img} alt={post.title}/>
         <form onSubmit={handleSubmit}>
-            <input 
+            <Input 
                 type="text"
                 name="title"
                 placeholder="title"
+                minLength="1"
+                maxLength="35"
                 value={editForm.title}
                 onChange={handleChange}
                 />
-            <input
+            <Input
                 type="text"
                 name="img"
                 placeholder="url"
                 value={editForm.img}
                 onChange={handleChange}
                 />
-                <button type="submit">Update</button>
+                <Button type="submit" value="Update Post"/>
         </form>
-        <StyledBtn onClick={removePost}>Delete Post</StyledBtn>
-        <Link to={`/${post._id}`}>Cancel</Link>
+        <Link to={`/`}><Button value="Cancel"/></Link>
+        <Button onClick={removePost} value="Delete Post"/>
         {/* populate form values from post */}
 
     </StyledDiv>
