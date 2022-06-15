@@ -42,11 +42,11 @@ flowchart LR
 
 | Screenshots | Detail |
 |-------|--------|
-|![Home](/public/Main.png) | Landing Page |
-| ![Create](/public/Create.png) | Create a post page |
-| ![Show](/public/Show.png) | Display one post |
-| ![Edit](/public/Edit.png) | Edit the chosen post |
-| ![About](/public/About.png) | Learn more about the devs on their socials |
+|![Home](https://github.com/Isyates/pwnterest-project3-frontend/blob/main/public/Main.png?raw=true) | Landing Page |
+| ![Create](https://github.com/Isyates/pwnterest-project3-frontend/blob/main/public/Create.png?raw=true) | Create a post page |
+| ![Show](https://github.com/Isyates/pwnterest-project3-frontend/blob/main/public/Show.png?raw=true) | Display one post |
+| ![Edit](https://github.com/Isyates/pwnterest-project3-frontend/blob/main/public/Edit.png?raw=true) | Edit the chosen post |
+| ![About](https://github.com/Isyates/pwnterest-project3-frontend/blob/main/public/About.png?raw=true) | Learn more about the devs on their socials |
 
 ## Coming Soon
 
