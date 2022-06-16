@@ -1,5 +1,6 @@
-//styled components
 import styled from "styled-components"
+import github_img from "../img/github.png"
+import linkedin_img from "../img/linkedin.png"
 
 const DevContainer = styled.div`
     display: grid;
@@ -40,9 +41,13 @@ const DevStats = styled.div`
         margin: 0;
         padding: 0
     }
-    i{
-        font-size: 1.5em;
-        margin-left: .4em;
+    img{
+        width: 1.25em;
+        margin-left: .7em;
+        filter: invert(1);
+        position: relative;
+        top: 3px;
+        border-radius: .1em
     }
     p{
         font-size: .9em;
@@ -68,8 +73,8 @@ export default function Dev({ dev, idx }) {
             <DevStats>
                 <span>
                 <h3>{name}</h3>
-                <a href={github}><i class="fa-brands fa-github-square"></i></a>
-                <a href={linkedin}><i class="fa-brands fa-linkedin"></i></a>
+                <a href={github}><img src={github_img} alt="github link" /></a>
+                <a href={linkedin}><img src={linkedin_img} alt="linkedin link" /></a>
                 </span>
                 <p>{blurb}</p>
             </DevStats>
